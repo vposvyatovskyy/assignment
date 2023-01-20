@@ -1,8 +1,7 @@
-import Row from './Row';
-import classes from './Table.module.css';
+import CurrenciesTableRow from './CurrenciesTableRow';
+import classes from './CurrenciesTable.module.css';
 
-function Table(props) {
-    console.log(props.currencies[0]);
+function CurrenciesTable(props) {
     return (
         <div>
             <div className={classes.tableHeaders}>
@@ -11,9 +10,9 @@ function Table(props) {
                 <div className={classes.tableHeader}>Values</div>
                 <div className={classes.tableHeader}>Actions</div>
             </div>
-            {props.currencies.map((currency) => <Row actionType={props.actionType} onClickHandler={props.onClickHandler} rowData={currency}/>)}
+            {props.currencies.map((currency) => <CurrenciesTableRow onClickHandler={props.onClickHandler} rowData={currency}/>)}
         </div>
     );
 }
 
-export default Table;
+export default CurrenciesTable;

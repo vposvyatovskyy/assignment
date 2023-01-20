@@ -1,0 +1,9 @@
+.tableHeaders {
+    display: flex;
+    flex-direction: row;
+}
+
+.tableHeader {
+    width: 70px;
+    padding: 5px;
+}
